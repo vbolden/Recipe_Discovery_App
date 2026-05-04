@@ -39,8 +39,31 @@ function RecipeDetailPage() {
 
     const favorited = isFavorite(meal.idMeal);
 
-    return 
+    return (
+        <div>
+            <img src={meal.strMealThumb} alt={meal.strMeal} />
+            <h1>{meal.strMeal}</h1>
+            <p>{meal.strCategory} {meal.strArea}</p>
 
+            <button
+                onClick={() => favorited
+                    ? removeFavorite(meal.idMeal)
+                    : addFavorite(meal.idMeal)}
+            >
+                {favorited ? "Remove from Favorites" : "Add to Favorites"}
+            </button>
+
+            <h2>Ingredients</h2>
+            <ul>
+                {ingredients.map(({ ingredient, measure }) => (
+                    <li key={ingredient}>{measure} {ingredient}</li>
+                ))}
+            </ul>
+
+            <h2>Instructions</h2>
+            <p>{meal.strInstructions}</p>
+        </div>
+    )
 }
 
 export default RecipeDetailPage;
