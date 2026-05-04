@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { endpoints } from "../api/mealdb";
 
 function Navbar() {
     const [query, setQuery] = useState('');
