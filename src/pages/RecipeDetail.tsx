@@ -20,7 +20,7 @@ function RecipeDetailPage() {
     if (error) return <ErrorMessage message={error} />
 
     const meal = data?.meals?.[0];
-    if(!meal) return <ErrorMessage message="Recipe not found" />;
+    if (!meal) return <ErrorMessage message="Recipe not found" />;
 
     // EXTRACT INGREDIENTS DYNAMICALLY
     const ingredients = []
@@ -29,13 +29,17 @@ function RecipeDetailPage() {
         const ingredient = meal[`strIngredient${i}`];
         const measure = meal[`strIngredient${i}`];
 
-        if(ingredient && ingredient.trim() !== "") {
+        if (ingredient && ingredient.trim() !== "") {
             ingredients.push({
                 ingredient,
                 measure,
             });
         }
     }
+
+    const favorited = isFavorite(meal.idMeal);
+
+    return 
 
 }
 
