@@ -2,10 +2,40 @@ import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { useFavorites } from "../context/FavoritesContext";
 import type { MealDetailResponse } from "../types/recipe";
+import { endpoints } from "../api/mealdb";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/Errors";
 
 function RecipeDetailPage() {
+    const { recipeId } = useParams<{ recipeId: string }>();
+    const { addFavorite, removeFavorite, isFavorite } = useFavorites();
+
+    const { data, loading, error } = useFetch<MealDetailResponse>(
+        recipeId
+            ? endpoints.recipeDetails(recipeId)
+            : null
+    );
+
+    if (loading) return <Spinner />
+    if (error) return <ErrorMessage message={error} />
+
+    const meal = data?.meals?.[0];
+    if(!meal) return <ErrorMessage message="Recipe not found" />;
+
+    // EXTRACT INGREDIENTS DYNAMICALLY
+    const ingredients = []
+
+    for (let i = 1; i <= 20; i++) {
+        const ingredient = meal[`strIngredient${i}`];
+        const measure = meal[`strIngredient${i}`];
+
+        if(ingredient && ingredient.trim() !== "") {
+            ingredients.push({
+                ingredient,
+                measure,
+            });
+        }
+    }
 
 }
 
