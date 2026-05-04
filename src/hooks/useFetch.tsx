@@ -4,6 +4,27 @@ function useFetch<T>(url: string) {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+
+    // USEEFFECT STATEMENT
+    useEffect(() => {
+        // API FETCH, TRY/CATCH BLOCK
+        async function fetchData() {
+            try {
+                setLoading(true);
+
+                const response = await fetch(url);
+
+                if(!response.ok) {
+                    throw new Error("Something went wrong...");
+                }
+
+                const result = await response.json();
+
+            } catch (error) {
+
+            }
+        }
+    })
 }
 
 export default useFetch;
