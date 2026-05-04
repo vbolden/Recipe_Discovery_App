@@ -15,13 +15,18 @@ const FavoritesContext = createContext<FavoritesContextType | undefined>(
 export function FavoritesProvider({children}: {children: React.ReactNode}) {
     const [favorites, setFavorites] = useLocalStorage<string[]>('favorites', []);
 
+    // FUNCTION TO ADD FAVORITES
     const addFavorite = (id: string) => {
         setFavorites([...favorites, id]);
     };
 
+    // FUNCTION TO REMOVE FAVORITES
     const removeFavorite = (id: string) => {
         setFavorites(favorites.filter(favId => favId !== id));
     };
 
-    
+    // FUNCTION TO CHECK IF MEAL ID EXISTS IN FAVORITES ARRAY
+    const isFavorite = (id: string): boolean => {
+        return favorites.includes(id);
+    }
 }
