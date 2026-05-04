@@ -14,4 +14,10 @@ const FavoritesContext = createContext<FavoritesContextType | undefined>(
 
 export function FavoritesProvider({children}: {children: React.ReactNode}) {
     const [favorites, setFavorites] = useLocalStorage<string[]>('favorites', []);
+
+    const addFavorite = (id: string) => {
+        setFavorites([...favorites, id]);
+    };
+
+    
 }
