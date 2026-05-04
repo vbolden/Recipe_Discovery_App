@@ -1,3 +1,12 @@
 import { createContext } from "react";
 
-export const FavoritesContext = createContext([]);
+type FavoritesContextType = {
+    favorites: string[];
+    addFavorite: (id: string) => void;
+    removeFavorite: (id: string) => void;
+    isFavorite: (id: string) => boolean
+}
+
+export const FavoritesContext = createContext<FavoritesContextType | undefined>(
+    undefined
+);
