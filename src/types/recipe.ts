@@ -22,3 +22,16 @@ export interface MealDetail extends MealSummary {
     strSource: string;
     [key: string]: string | null; 
 }
+
+// API RESPONSE WRAPPERS
+export interface CategoriesResponse {
+    categories: Category[];
+}
+
+export interface MealsResponse {
+    meals: MealSummary[] | null;
+}
+
+export interface MealDetailResponse {
+    meals: MealDetail[] | null;
+}
