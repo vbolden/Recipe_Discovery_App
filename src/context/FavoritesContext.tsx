@@ -1,12 +1,17 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 type FavoritesContextType = {
-    favorites: string[];
+    favorites: string[];    // ARRAY OF MEAL IDS
     addFavorite: (id: string) => void;
     removeFavorite: (id: string) => void;
     isFavorite: (id: string) => boolean
 }
 
-export const FavoritesContext = createContext<FavoritesContextType | undefined>(
+const FavoritesContext = createContext<FavoritesContextType | undefined>(
     undefined
 );
+
+export function FavoritesProvider({children}: {children: React.ReactNode}) {
+    const [favorites, setFavorites] = useLocalStorage<string[]>('favorites', []);
+}
