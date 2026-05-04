@@ -14,7 +14,7 @@ function useFetch<T>(url: string) {
 
                 const response = await fetch(url);
 
-                if(!response.ok) {
+                if (!response.ok) {
                     throw new Error("Something went wrong...");
                 }
 
@@ -27,7 +27,9 @@ function useFetch<T>(url: string) {
                 setLoading(false);
             }
         }
-    })
+        fetchData();
+    }, [url]);
+    return { data, loading, error }
 }
 
 export default useFetch;
