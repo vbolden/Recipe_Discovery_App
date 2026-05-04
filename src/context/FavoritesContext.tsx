@@ -19,5 +19,9 @@ export function FavoritesProvider({children}: {children: React.ReactNode}) {
         setFavorites([...favorites, id]);
     };
 
+    const removeFavorite = (id: string) => {
+        setFavorites(favorites.filter(favId => favId !== id));
+    };
+
     
 }
