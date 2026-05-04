@@ -23,6 +23,8 @@ function useFetch<T>(url: string) {
                 setData(result)
             } catch (error) {
                 setError(error instanceof Error ? error.message : "Unknown error");
+            } finally {
+                setLoading(false);
             }
         }
     })
