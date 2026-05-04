@@ -3,13 +3,13 @@ import useFetch from "../hooks/useFetch";
 import type { CategoriesResponse } from "../types/recipe";
 import { endpoints } from "../api/mealdb";
 import Spinner from "../components/Spinner";
-// import Errors from "../components/Errors";
+import ErrorMessage from "../components/Errors";
 
 function HomePage() {
     const {data, loading, error} = useFetch<CategoriesResponse>(endpoints.categories);
 
-    // if(loading) return <Spinner />
-    // if(error) return <ErrorMessage />
+    if(loading) return <Spinner />
+    if(error) return <ErrorMessage message={error}  />
 
     return (
         <div>
