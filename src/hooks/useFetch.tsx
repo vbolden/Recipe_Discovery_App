@@ -20,8 +20,9 @@ function useFetch<T>(url: string) {
 
                 const result = await response.json();
 
+                setData(result)
             } catch (error) {
-
+                setError(error instanceof Error ? error.message : "Unknown error");
             }
         }
     })
