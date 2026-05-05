@@ -109,3 +109,39 @@ button:hover {
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
+
+/* RECIPE DETAILS */
+.recipe-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* .recipe-detail img {
+
+} */
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* .recipe-meta {
+
+} */
+
+.ingredients {
+    padding: 0.5rem;
+}
+
+.ingredients ul {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.instructions {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    line-height: 1.7;
+}
