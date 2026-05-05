@@ -1,9 +1,10 @@
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import type { MealsResponse } from "../types/recipe";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/Errors";
 import { endpoints } from "../api/mealdb";
+import RecipeCard from "../components/RecipeCard";
 
 function SearchPage() {
     const [searchParams] = useSearchParams();
@@ -28,12 +29,7 @@ function SearchPage() {
             ) : (
                 <div className="grid">
                     {meals.map(meal => (
-                        <Link key={meal.idMeal} to={`/recipe/${meal.idMeal}`} >
-                            <div className="recipe-card">
-                                <img src={meal.strMealThumb} alt={meal.idMeal} />
-                                <h4>{meal.strMeal}</h4>
-                            </div>
-                        </Link>
+                        <RecipeCard key={meal.idMeal} meal={meal} />
                     ))}
                 </div>
             )}
