@@ -15,20 +15,22 @@ function Navbar() {
     };
 
     return (
-        <nav>
-            <Link to="/">Recipe Discovery</Link>
-            <form onSubmit={handleSearch}>
-                <input
-                    value={query}
-                    type="text"
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search recipes..."
-                />
-                <button type="submit">
-                    Search
-                </button>
-            </form>
-            <Link to="/favorites" >Favorites</Link>
+        <nav className="navbar">
+            <div className="navbar-content">
+                <Link to="/" className="logo">Recipe Discovery</Link>
+                <form onSubmit={handleSearch} className="search">
+                    <input
+                        value={query}
+                        type="text"
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Search recipes..."
+                    />
+                    <button type="submit">
+                        Search
+                    </button>
+                </form>
+                <Link to="/favorites" className="favorites-link" >Favorites</Link>
+            </div>
         </nav>
     )
 }
