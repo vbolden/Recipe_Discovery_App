@@ -21,12 +21,12 @@ function SearchPage() {
     const meals = data?.meals;
 
     return(
-        <div>
+        <div className="page">
             <h2>Results for "{query}"</h2>
             {!meals ? (
                 <p>No recipes found. Try a different search</p>
             ) : (
-                <div>
+                <div className="grid">
                     {meals.map(meal => (
                         <Link key={meal.idMeal} to={`/recipe/${meal.idMeal}`} >
                             <div className="recipe-card">
