@@ -19,7 +19,8 @@ The Recipe Discovery application is a single-page React application (SPA) that a
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [React Router](https://reactrouter.com/) 
+- [React Dev](https://react.dev/learn/passing-data-deeply-with-context) 
+- [TheMealDB] (https://www.themealdb.com/api.php)
 
 # Reflection
