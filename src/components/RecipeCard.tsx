@@ -19,17 +19,19 @@ function RecipeCard({ meal, showFavorite = true }: RecipeCardProps) {
     };
 
     return (
-        <Link to={`/recipe/${meal.idMeal}`}>
-            <div>
+        <Link to={`/recipe/${meal.idMeal}`} className="recipe-link">
+            <div className="recipe-card">
                 <img src={meal.strMealThumb} alt={meal.strMeal} />
-                {showFavorite && (
-                    <button onClick={handleFavoriteClick} >
-                        {favorited ? "Favorited" : "Not Favorited"}
-                    </button>
-                )}
-            </div>
-            <div>
-                <h3>{meal.strMeal}</h3>
+
+                <div className="recipe-content">
+                    <h3>{meal.strMeal}</h3>
+
+                    {showFavorite && (
+                        <button onClick={handleFavoriteClick} >
+                            {favorited ? "Favorited" : "Not Favorited"}
+                        </button>
+                    )}
+                </div>
             </div>
         </Link>
     )
