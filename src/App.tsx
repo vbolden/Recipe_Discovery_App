@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FavoritesProvider } from './context/FavoritesContext'
+import Navbar from './components/Navbar'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
     <FavoritesProvider>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="container">
         <Routes>
           <Route />
