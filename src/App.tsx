@@ -3,8 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FavoritesProvider } from './context/FavoritesContext'
 import Navbar from './components/Navbar'
 import HomePage from './pages/Home'
-
-
+import CategoryPage from './pages/Category'
 
 function App() {
 
@@ -15,7 +14,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/" element={} />
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
           <Route path="/" element={} />
           <Route path="/" element={} />
           <Route path="/" element={} />
