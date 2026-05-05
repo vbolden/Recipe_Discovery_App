@@ -38,11 +38,11 @@ function FavoritesPage() {
     }, [favorites]);
 
     return (
-        <div>
+        <div className="page">
             <h2>Your Favorite Recipes</h2>
             {favorites.length === 0 ?
                 <p>You haven't saved any recipes yet. <Link to="/" >Browse categories</Link></p>
-                : <div>
+                : <div className="grid">
                     {meals.map(meal => (
                         <div key={meal.idMeal} className="recipe-card">
                             <Link to={`/recipe/${meal.idMeal}`} >
