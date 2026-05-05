@@ -40,28 +40,34 @@ function RecipeDetailPage() {
     const favorited = isFavorite(meal.idMeal);
 
     return (
-        <div>
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
-            <h1>{meal.strMeal}</h1>
-            <p>{meal.strCategory} {meal.strArea}</p>
-
-            <button
-                onClick={() => favorited
-                    ? removeFavorite(meal.idMeal)
-                    : addFavorite(meal.idMeal)}
-            >
-                {favorited ? "Remove from Favorites" : "Add to Favorites"}
-            </button>
-
-            <h2>Ingredients</h2>
-            <ul>
-                {ingredients.map(({ ingredient, measure }) => (
-                    <li key={ingredient}>{measure} {ingredient}</li>
-                ))}
-            </ul>
-
-            <h2>Instructions</h2>
-            <p>{meal.strInstructions}</p>
+        <div className="page">
+            <div className="recipe-detail">
+                <img src={meal.strMealThumb} alt={meal.strMeal} />
+                <div className="recipe-info">
+                    <h1>{meal.strMeal}</h1>
+                    <p className="recipe-meta">{meal.strCategory} {meal.strArea}</p>
+                    <button
+                        className="favorite-btn"
+                        onClick={() => favorited
+                            ? removeFavorite(meal.idMeal)
+                            : addFavorite(meal.idMeal)}
+                    >
+                        {favorited ? "Remove from Favorites" : "Add to Favorites"}
+                    </button>
+                    <div className="ingredients">
+                        <h2>Ingredients</h2>
+                        <ul>
+                            {ingredients.map(({ ingredient, measure }) => (
+                                <li key={ingredient}>{measure} {ingredient}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="instructions">
+                <h2>Instructions</h2>
+                <p>{meal.strInstructions}</p>
+            </div>
         </div>
     )
 }
