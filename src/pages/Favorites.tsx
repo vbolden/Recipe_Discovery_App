@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useFavorites } from "../context/FavoritesContext";
 import type { MealDetail } from "../types/recipe";
 import { endpoints } from "../api/mealdb";
+import RecipeCard from "../components/RecipeCard";
 
 function FavoritesPage() {
     const { favorites, removeFavorite } = useFavorites();
@@ -45,10 +46,7 @@ function FavoritesPage() {
                 : <div className="grid">
                     {meals.map(meal => (
                         <div key={meal.idMeal} className="recipe-card">
-                            <Link to={`/recipe/${meal.idMeal}`} >
-                                <img src={meal.strMealThumb} alt={meal.strMeal} />
-                                <h4>{meal.strMeal}</h4>
-                            </Link>
+                            <RecipeCard key={meal.idMeal} meal={meal} />
                             <button onClick={() => removeFavorite(meal.idMeal)} >
                                 Remove
                             </button>
