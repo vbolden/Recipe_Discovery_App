@@ -12,16 +12,21 @@ function HomePage() {
     if(error) return <ErrorMessage message={error}  />
 
     return (
-        <div>
-            {data?.categories.map(category => (
-                <Link key={category.id}
-                to={`/category/${category.strCategory}`} >
-                    <div>
-                        <img src={category.strCategoryThumb} alt={category.strCategory} />
-                        <h3>{category.strCategory}</h3>
-                    </div>
-                </Link>
-            ))}
+        <div className="page">
+            <h1>Recipe Categories</h1>
+            <div className="grid">
+                {data?.categories.map(category => (
+                    <Link key={category.id}
+                    to={`/category/${category.strCategory}`} >
+                        <div className="recipe-card">
+                            <img src={category.strCategoryThumb} alt={category.strCategory} />
+                            <div className="recipe-content">
+                                <h3>{category.strCategory}</h3>
+                            </div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
         </div>
     )
 }
