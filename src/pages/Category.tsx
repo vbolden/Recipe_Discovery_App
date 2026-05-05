@@ -18,7 +18,7 @@ function CategoryPage() {
     if (error) return <ErrorMessage message={error} />
 
     return (
-        <div>
+        <div className="page">
             <h2>{categoryName}</h2>
             <div className="grid">
                 {data?.meals?.map(meal => (
