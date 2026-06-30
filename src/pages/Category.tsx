@@ -5,6 +5,7 @@ import { endpoints } from "../api/mealdb";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/Errors";
 import RecipeCard from "../components/RecipeCard";
+import BackButton from "../components/BackButton";
 
 function CategoryPage() {
     const { categoryName } = useParams<{ categoryName: string }>();
@@ -20,6 +21,8 @@ function CategoryPage() {
 
     return (
         <div className="page">
+            <BackButton />
+
             <h2 className="category-name">{categoryName}</h2>
             <div className="grid">
                 {data?.meals?.map(meal => (
