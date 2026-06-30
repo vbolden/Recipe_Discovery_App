@@ -1,7 +1,8 @@
 function Spinner() {
     return (
-        <div className="spinner-container">
-            <div className="spinner"></div>
+        <div className="spinner-wrap">
+            <div className="spinner" />
+            <p className="spinner-label">Finding recipes...</p>
         </div>
     )
 }
