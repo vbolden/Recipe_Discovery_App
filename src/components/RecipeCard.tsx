@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import type { MealSummary } from "../types/recipe";
 import { useFavorites } from "../context/FavoritesContext";
+import { FaHeart } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa6";
+
 
 interface RecipeCardProps {
     meal: MealSummary;
@@ -28,7 +31,7 @@ function RecipeCard({ meal, showFavorite = true }: RecipeCardProps) {
 
                     {showFavorite && (
                         <button onClick={handleFavoriteClick} >
-                            {favorited ? "Favorited" : "Not Favorited"}
+                            {favorited ? <FaHeart /> : <FaRegHeart />}
                         </button>
                     )}
                 </div>
