@@ -42,7 +42,12 @@ function FavoritesPage() {
         <div className="page">
             <h2>Your Favorite Recipes</h2>
             {favorites.length === 0 ?
-                <p>You haven't saved any recipes yet. <Link to="/" >Browse categories</Link></p>
+                <div className="empty-state">
+                    <div className="icon">🍽️</div>
+                    <h2 className="title">No Favorites yet</h2>
+                    <p className="sub">Browse categories and tap the heart to save recipe</p>
+                    <Link to="/" className="link" >Browse categories</Link>
+                </div>
                 : <div className="grid">
                     {meals.map(meal => (
                         <div key={meal.idMeal} className="recipe-card">
