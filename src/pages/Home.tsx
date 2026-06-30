@@ -12,7 +12,7 @@ function HomePage() {
     if(error) return <ErrorMessage message={error}  />
 
     return (
-        <div>
+        <div className="page">
             <div className="page-header">
                 <h1 className="title">What are you craving?</h1>
                 <p className="subtitle">Browse by Category</p>
