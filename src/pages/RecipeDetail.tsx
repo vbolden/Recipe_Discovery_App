@@ -47,7 +47,7 @@ function RecipeDetailPage() {
                     <h1>{meal.strMeal}</h1>
                     <p className="recipe-meta">{meal.strCategory} {meal.strArea}</p>
                     <button
-                        className="favorite-btn"
+                        className={`fav-btn ${isFavorite(meal.idMeal) ? 'fav-btn active' : ''}`}
                         onClick={() => favorited
                             ? removeFavorite(meal.idMeal)
                             : addFavorite(meal.idMeal)}
