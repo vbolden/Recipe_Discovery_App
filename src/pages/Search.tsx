@@ -23,7 +23,7 @@ function SearchPage() {
 
     return(
         <div className="page">
-            <h2>Results for "{query}"</h2>
+            <h2 className="search-title">Results for "{query}"</h2>
             {!meals ? (
                 <p>No recipes found. Try a different search</p>
             ) : (
