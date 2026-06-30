@@ -12,9 +12,12 @@ function HomePage() {
     if(error) return <ErrorMessage message={error}  />
 
     return (
-        <div className="page">
-            <h1>Recipe Categories</h1>
-            <div className="grid">
+        <div>
+            <div className="page-header">
+                <h1 className="title">What are you craving?</h1>
+                <p className="subtitle">Browse by Category</p>
+            </div>
+            <div className="category-grid">
                 {data?.categories.map(category => (
                     <Link key={category.id}
                     to={`/category/${category.strCategory}`} >
