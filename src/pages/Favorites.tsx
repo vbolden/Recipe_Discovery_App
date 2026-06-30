@@ -6,7 +6,7 @@ import { endpoints } from "../api/mealdb";
 import RecipeCard from "../components/RecipeCard";
 
 function FavoritesPage() {
-    const { favorites, removeFavorite } = useFavorites();
+    const { favorites } = useFavorites();
     const [meals, setMeals] = useState<MealDetail[]>([]);
 
     
