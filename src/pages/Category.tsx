@@ -20,7 +20,7 @@ function CategoryPage() {
 
     return (
         <div className="page">
-            <h2>{categoryName}</h2>
+            <h2 className="category-name">{categoryName}</h2>
             <div className="grid">
                 {data?.meals?.map(meal => (
                     <RecipeCard key={meal.idMeal} meal={meal} />
