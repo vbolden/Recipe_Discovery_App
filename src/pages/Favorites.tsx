@@ -52,9 +52,6 @@ function FavoritesPage() {
                     {meals.map(meal => (
                         <div key={meal.idMeal} className="recipe-card">
                             <RecipeCard key={meal.idMeal} meal={meal} />
-                            <button onClick={() => removeFavorite(meal.idMeal)} >
-                                Remove
-                            </button>
                         </div>
                     ))}
                 </div>}
