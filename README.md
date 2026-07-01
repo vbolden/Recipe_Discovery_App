@@ -62,21 +62,17 @@ Built with React, TypeScript, and TheMealDB API.
 (Add screenshots of your app here)
 
 ```
-Home Page
-- Browse recipe categories
-(./assets/homepage.png)
+### Home Page
+![Home Page](./assets/homepage.png)
 
-Recipe Details
-- Ingredients and cooking instructions
-(./assets/recipedetailspage.png)
+### Recipe Details
+![Recipe Details](./assets/recipedetailspage.png)
 
-Favorites
-- Saved recipes
-(./assets/favoritespage.png)
+### Favorites
+![Favorites Page](./assets/favoritespage.png)
 
-Search Page
-- See results for recipe searches
-(./assets/searchpage.png)
+### Search Page
+![Search Page](./assets/searchpage.png)
 
 ```
 
