@@ -59,9 +59,6 @@ Built with React, TypeScript, and TheMealDB API.
 
 ## 📸 Preview
 
-(Add screenshots of your app here)
-
-```
 ### Home Page
 ![Home Page](./assets/homepage.png)
 
@@ -73,8 +70,6 @@ Built with React, TypeScript, and TheMealDB API.
 
 ### Search Page
 ![Search Page](./assets/searchpage.png)
-
-```
 
 ---
 
