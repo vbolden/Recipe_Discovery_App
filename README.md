@@ -60,16 +60,16 @@ Built with React, TypeScript, and TheMealDB API.
 ## 📸 Preview
 
 ### Home Page
-![Home Page](./assets/homepage.png)
+![Home Page](./src./assets/homepage.png)
 
 ### Recipe Details
-![Recipe Details](./assets/recipedetailspage.png)
+![Recipe Details](./src/assets/recipedetailspage.png)
 
 ### Favorites
-![Favorites Page](./assets/favoritespage.png)
+![Favorites Page](./src/assets/favoritespage.png)
 
 ### Search Page
-![Search Page](./assets/searchpage.png)
+![Search Page](./src/assets/searchpage.png)
 
 ---
 
