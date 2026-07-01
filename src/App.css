@@ -256,12 +256,16 @@ button {
     color: #3d3830;
 }
 
+/* FAVORITES PAGE */
+.favs-page {
+    margin-bottom: 24px;
+}
+
 /* BACK & HOME BUTTON */
 .page-actions {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 24px;
     font-size: 14px;
 }
 
@@ -275,6 +279,7 @@ button {
     color: var(--text);
     transition: .2s ease;
     gap: 3px;
+    margin-bottom: 24px;
 }
 
 .back-button:hover,

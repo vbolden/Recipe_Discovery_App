@@ -4,12 +4,13 @@ import { useFavorites } from "../context/FavoritesContext";
 import type { MealDetail } from "../types/recipe";
 import { endpoints } from "../api/mealdb";
 import RecipeCard from "../components/RecipeCard";
+import HomeButton from "../components/HomeButton";
 
 function FavoritesPage() {
     const { favorites } = useFavorites();
     const [meals, setMeals] = useState<MealDetail[]>([]);
 
-    
+
 
     // FETCH DETAILS FOR EACH MEAL ID
     useEffect(() => {
@@ -33,14 +34,16 @@ function FavoritesPage() {
                     fetchedMeals.push(meal);
                 }
             }
-            setMeals(fetchedMeals)
+            setMeals(fetchedMeals);
         }
         fetchFavorites();
     }, [favorites]);
 
     return (
         <div className="page">
-            <h2>Your Favorite Recipes</h2>
+            <HomeButton />
+
+            <h2 className="favs-page">Your Favorite Recipes</h2>
             {favorites.length === 0 ?
                 <div className="empty-state">
                     <div className="icon">🍽️</div>
@@ -50,13 +53,11 @@ function FavoritesPage() {
                 </div>
                 : <div className="grid">
                     {meals.map(meal => (
-                        <div key={meal.idMeal} className="recipe-card">
-                            <RecipeCard key={meal.idMeal} meal={meal} />
-                        </div>
+                        <RecipeCard key={meal.idMeal} meal={meal} />
                     ))}
                 </div>}
         </div>
-    )
+    );
 }
 
 export default FavoritesPage;
