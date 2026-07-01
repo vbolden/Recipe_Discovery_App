@@ -7,6 +7,7 @@ import CategoryPage from './pages/Category'
 import RecipeDetailPage from './pages/RecipeDetail'
 import FavoritesPage from './pages/Favorites'
 import SearchPage from './pages/Search'
+import Footer from './components/Footer';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
         </Routes>
       </div>
+      <Footer />
     </FavoritesProvider>
     </BrowserRouter>
   )
