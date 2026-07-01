@@ -17,7 +17,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-content">
-                <Link to="/" className="logo">Recipe Discovery</Link>
+                <Link to="/" className="logo">fork<span>&</span>find</Link>
                 <form onSubmit={handleSearch} className="search">
                     <input
                         value={query}
