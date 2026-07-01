@@ -64,15 +64,20 @@ Built with React, TypeScript, and TheMealDB API.
 ```
 Home Page
 - Browse recipe categories
+<img width="1440" height="900" alt="homepage" src="https://github.com/user-attachments/assets/ada64827-2bbb-4f97-b314-be0930f291b4" />
 
 Recipe Details
 - Ingredients and cooking instructions
+<img width="1440" height="900" alt="recipedetailspage" src="https://github.com/user-attachments/assets/17208748-ad2c-4f93-bcfe-1d7e10b9b98a" />
 
 Favorites
 - Saved recipes
+<img width="1440" height="900" alt="favoritespage" src="https://github.com/user-attachments/assets/1728291f-3c58-4c8e-afea-066bdba03317" />
 
 Search Page
 - See results for recipe searches
+<img width="1440" height="900" alt="searchpage" src="https://github.com/user-attachments/assets/b7a7a2dc-8da2-4de7-9bf9-637694ce3e5e" />
+
 ```
 
 ---
