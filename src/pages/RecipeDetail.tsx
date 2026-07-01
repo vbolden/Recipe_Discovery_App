@@ -6,6 +6,7 @@ import { endpoints } from "../api/mealdb";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/Errors";
 import BackButton from "../components/BackButton";
+import HomeButton from "../components/HomeButton";
 
 function RecipeDetailPage() {
     const { recipeId } = useParams<{ recipeId: string }>();
@@ -42,7 +43,10 @@ function RecipeDetailPage() {
 
     return (
         <div className="page">
-            <BackButton />
+            <div className="page-actions">
+                <BackButton />
+                <HomeButton />
+            </div>
 
             <div className="recipe-detail">
                 <img src={meal.strMealThumb} alt={meal.strMeal} />

@@ -256,17 +256,29 @@ button {
     color: #3d3830;
 }
 
-/* BACK BUTTON */
-.back-button {
-    background: transparent;
-    border: 1px solid var(--border);
-    padding: 6px 16px;
-    color: var(--text);
+/* BACK & HOME BUTTON */
+.page-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 24px;
-    transition: .2s ease;
+    font-size: 14px;
 }
 
-.back-button:hover {
+.back-button,
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text);
+    transition: .2s ease;
+    gap: 3px;
+}
+
+.back-button:hover,
+.home-button:hover {
     background: var(--text);
     color: white;
 }
