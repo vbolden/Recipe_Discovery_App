@@ -5,6 +5,7 @@ import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/Errors";
 import { endpoints } from "../api/mealdb";
 import RecipeCard from "../components/RecipeCard";
+import HomeButton from "../components/HomeButton";
 
 function SearchPage() {
     const [searchParams] = useSearchParams();
@@ -23,6 +24,8 @@ function SearchPage() {
 
     return(
         <div className="page">
+            <HomeButton />
+
             <h2 className="search-title">Results for "{query}"</h2>
             {!meals ? (
                 <p>No recipes found. Try a different search</p>
